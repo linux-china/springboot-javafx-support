@@ -1,10 +1,10 @@
 package de.felixroske.jfxtest;
 
-import de.felixroske.jfxsupport.*;
-import org.springframework.boot.autoconfigure.*;
-import org.springframework.context.*;
-
-import javafx.stage.*;
+import de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport;
+import de.felixroske.jfxsupport.SplashScreen;
+import javafx.stage.Stage;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class SampleApp extends AbstractJavaFxApplicationSupport {

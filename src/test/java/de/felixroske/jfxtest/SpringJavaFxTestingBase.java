@@ -13,7 +13,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
 
-@SpringBootTest
+@SpringBootTest(classes = SampleApp.class)
 @ExtendWith({SpringExtension.class, ApplicationExtension.class})
 public class SpringJavaFxTestingBase implements ApplicationContextAware {
 

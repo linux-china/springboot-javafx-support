@@ -8,7 +8,6 @@ import org.testfx.api.FxToolkit;
 
 import java.util.*;
 
-import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.*;
 
 public class CustomErrorActionTest {

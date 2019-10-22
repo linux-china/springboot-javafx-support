@@ -7,7 +7,7 @@ import javafx.scene.*;
 import javafx.scene.layout.*;
 
 import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class SplashScreenTest extends SpringJavaFxTestingBase {
 

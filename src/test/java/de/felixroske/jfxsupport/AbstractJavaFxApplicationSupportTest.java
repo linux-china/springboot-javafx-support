@@ -8,7 +8,7 @@ import org.testfx.api.*;
 import java.util.*;
 import javafx.scene.image.*;
 
-import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class AbstractJavaFxApplicationSupportTest {
 

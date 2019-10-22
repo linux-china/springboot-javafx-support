@@ -1,19 +1,20 @@
 package de.felixroske.jfxtest;
 
-import de.felixroske.jfxsupport.*;
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.*;
-import org.springframework.beans.*;
-import org.springframework.boot.test.context.*;
-import org.springframework.context.*;
-import org.springframework.test.context.junit.jupiter.*;
-import org.testfx.framework.junit5.*;
+import de.felixroske.jfxsupport.AbstractFxmlView;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.BeansException;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.testfx.framework.junit5.ApplicationExtension;
+import org.testfx.framework.junit5.Start;
 
-import javafx.scene.*;
-import javafx.stage.*;
-
-@SpringBootTest (classes = SampleConfig.class)
-@ExtendWith ({SpringExtension.class, ApplicationExtension.class})
+@SpringBootTest
+@ExtendWith({SpringExtension.class, ApplicationExtension.class})
 public class SpringJavaFxTestingBase implements ApplicationContextAware {
 
     protected ApplicationContext applicationContext;
@@ -32,8 +33,7 @@ public class SpringJavaFxTestingBase implements ApplicationContextAware {
             System.setProperty("prism.text", "t2k");
             System.setProperty("java.awt.headless", "true");
             System.setProperty("headless.geometry", geometryProp);
-        }
-        else {
+        } else {
             System.setProperty("java.awt.headless", "false");
         }
     }
@@ -55,8 +55,7 @@ public class SpringJavaFxTestingBase implements ApplicationContextAware {
         if (viewScene == null) {
             Scene newScene = new Scene(controllerViewBean.getView());
             stage.setScene(newScene);
-        }
-        else
+        } else
             stage.setScene(viewScene);
         stage.show();
         stage.centerOnScreen();
